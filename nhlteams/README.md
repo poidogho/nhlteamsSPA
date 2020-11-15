@@ -4,9 +4,9 @@ This is a simple assessment app that fetches NHL teams and gets the players from
 
 ## Downloading and running app
 
-Clone, download dependencies and rin app
+Clone, download dependencies and run app
 npm install
-mpm start
+npm start
 
 ## Testing
 
