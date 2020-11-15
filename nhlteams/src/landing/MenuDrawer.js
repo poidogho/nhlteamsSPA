@@ -28,7 +28,7 @@ const MenuDrawer = (props) => {
         className="sidenav"
         style={{ width: openNavbar ? "240px" : "0px" }}
       >
-        <a href="" className="closebtn" onClick={closeNav}>
+        <a href="!#" className="closebtn" onClick={closeNav}>
           &times;
         </a>
         {teams.length <= 0 ? (
