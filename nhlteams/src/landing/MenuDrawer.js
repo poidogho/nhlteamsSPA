@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import Logos from "../Logos";
 const MenuDrawer = (props) => {
   const [openNavbar, setOpenNavbar] = useState(false);
 
@@ -10,7 +10,8 @@ const MenuDrawer = (props) => {
   };
 
   /* Set the width of the side navigation to 0 */
-  const closeNav = () => {
+  const closeNav = (e) => {
+    e.preventDefault();
     setOpenNavbar(false);
   };
 
@@ -19,7 +20,7 @@ const MenuDrawer = (props) => {
       <div
         id="mySidenav"
         className="sidenav"
-        style={{ width: openNavbar ? "200px" : "0px" }}
+        style={{ width: openNavbar ? "240px" : "0px" }}
       >
         <a href="" className="closebtn" onClick={closeNav}>
           &times;
@@ -39,6 +40,7 @@ const MenuDrawer = (props) => {
                   onClick={() => props.getTeamPlayers(index)}
                 >
                   <b>{team.name}</b>
+                  <Logos logo={team.abbreviation} />
                 </li>
               ))}
             </ul>
