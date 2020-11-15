@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import MenuDrawer from "./MenuDrawer";
 import Team from "./Team";
 

@@ -47,6 +47,13 @@ li:hover{
   font-size: 20px;
   padding-right: 2%
 }
+
+.logo{
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  margin-left: 3%
+}
 /* The side navigation menu */
 .sidenav {
   height: 100%; 

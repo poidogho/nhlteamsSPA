@@ -37,7 +37,6 @@ class App extends Component {
   getTeamPlayers = (index) => {
     const { teams } = this.state;
     const team = teams[index];
-    console.log(team);
     axios
       .get(`https://statsapi.web.nhl.com/api/v1/teams/${team.id}/roster`)
       .then((res) => this.setState({ teamPlayers: res.data.roster }));
@@ -45,7 +44,6 @@ class App extends Component {
 
   render() {
     const { teams, teamPlayers } = this.state;
-    console.log(teams);
     return (
       <div className="App" data-test="component-app">
         <Landing

@@ -1,8 +1,12 @@
 import React from "react";
 
+/**
+ * Get NHL Teams Logos
+ * @function
+ * @param {logo}
+ */
 const Logos = ({ logo }) => {
   let src = "";
-  //const njd = require("./logos/njd.png");
   if (logo.toLowerCase().trim() === "njd") {
     src = "/assets/img/njd.png";
   } else if (logo.toLowerCase().trim() === "nyi") {
@@ -74,13 +78,9 @@ const Logos = ({ logo }) => {
   return (
     <img
       src={`${src}`}
-      style={{
-        width: "20px",
-        height: "20px",
-        borderRadius: "20px",
-        marginLeft: "3%",
-      }}
+      className="logo"
       alt="logo"
+      data-test="component-logo"
     />
   );
 };

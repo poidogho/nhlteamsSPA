@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Table, Modal, Button } from "antd";
 import { Flag } from "country-flags-react";
 import axios from "axios";
-import { getCode, getName } from "country-list";
+import { getName } from "country-list";
 
 export default class Team extends Component {
   state = {
@@ -31,14 +31,7 @@ export default class Team extends Component {
     });
   };
 
-  flag = (nationality) => {
-    const flag = `Flags.${nationality}`;
-    console.log(`Flags.${nationality}`);
-    return <flag />;
-  };
-
   playerModal = (playerInfo) => {
-    console.log(this.props);
     return (
       <Modal
         title={`Nationality of ${playerInfo.name}`}
@@ -118,7 +111,6 @@ export default class Team extends Component {
       .get(`https://statsapi.web.nhl.com/api/v1/people/${player.id}`)
       .then((res) => {
         const player = res.data.people[0];
-        console.log(player);
         const playerInfo = {
           name: player.fullName,
           nationality: player.nationality,

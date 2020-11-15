@@ -1,5 +1,11 @@
 import React, { useState } from "react";
 import Logos from "../Logos";
+
+/**
+ * Get NHL Teams
+ * @function
+ * @param {team array}
+ */
 const MenuDrawer = (props) => {
   const [openNavbar, setOpenNavbar] = useState(false);
 
