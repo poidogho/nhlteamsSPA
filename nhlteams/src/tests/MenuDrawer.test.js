@@ -3,6 +3,10 @@ import MenuDrawer from "../landing/MenuDrawer";
 import { findByTestAttr, checkProps } from "../testUtils/testUtils";
 import { shallow } from "enzyme";
 
+/**
+ * Set up default props
+ * @variable
+ */
 const defaultProps = {
   teams: [
     {
@@ -10,6 +14,12 @@ const defaultProps = {
     },
   ],
 };
+
+/**
+ * Get MenuDrawer component with props
+ * @function
+ * @param {Null}
+ */
 const setup = (props = {}) => {
   const setupProps = { ...defaultProps, ...props };
   return shallow(<MenuDrawer {...setupProps} />);

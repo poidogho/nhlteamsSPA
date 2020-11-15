@@ -17,6 +17,12 @@ const defaultProps = {
     },
   ],
 };
+
+/**
+ * Get Team component with props
+ * @function
+ * @param {Null}
+ */
 const setup = (props = {}) => {
   const setupProps = { ...defaultProps, ...props };
   return shallow(<Team {...setupProps} />);
